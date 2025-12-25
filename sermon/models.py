@@ -14,7 +14,6 @@ class Sermon(models.Model):
         'series.Series', on_delete=models.SET_NULL, null=True, blank=True)
     preached_date = models.DateField()
     duration = models.DurationField(null=True, blank=True)
-    scripture_references = models.TextField(blank=True)
     view_count = models.IntegerField(default=0)
     download_count = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -30,7 +29,7 @@ class Sermon(models.Model):
 class Speaker(models.Model):
     name = models.CharField(max_length=255)
     bio = models.TextField(blank=True)
-    photo = models.ImageField(upload_to='speakers/', blank=True, null=True)
+    # photo = models.ImageField(upload_to='speakers/', blank=True, null=True)
 
     def __str__(self):
         return self.name
