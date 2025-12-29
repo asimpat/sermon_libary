@@ -84,6 +84,8 @@ REST_FRAMEWORK = {
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+AUTH_USER_MODEL = 'authentication.Users'
+
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
